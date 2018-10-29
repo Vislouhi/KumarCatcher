@@ -30,7 +30,7 @@ public class SceneQubeData
    this.x= i* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
   this.y= j* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
   this.z= k* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
-  
+  System.out.println("x="+this.x+"y="+this.y+"z="+this.z)
  }
 }
 
