@@ -1,4 +1,6 @@
 
+// you can add other public classes to this editor in any order
+
 public class RandomView{
  
   private int numberOfQubes=3;
@@ -7,7 +9,7 @@ public class RandomView{
   public RandomView(){
    for(int i=0;i<GameParameters.numberOfQubes;i++){
      for(int j=0;j<GameParameters.numberOfQubes;j++){
-       for(int k=0;i<GameParameters.numberOfQubes;k++){
+       for(int k=0;k<GameParameters.numberOfQubes;k++){
         
         sceneQubes[i][j][k]=new SceneQubeData(i,j,k);
     
@@ -27,10 +29,11 @@ public class SceneQubeData
  public SceneQubeData(int i, int j, int k)
  {
   
-   this.x= i* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
-  this.y= j* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
-  this.z= k* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
-  System.out.println("x="+this.x+"y="+this.y+"z="+this.z)
+   this.x= (float)i* GameParameters.sceneCubeSize+GameParameters.sceneCubeBound+GameParameters.sceneCubeEffectiveSize*(float)Math.random();
+  this.y= (float)j* GameParameters.sceneCubeSize+GameParameters.sceneCubeBound+GameParameters.sceneCubeEffectiveSize*(float)Math.random();
+  this.z= (float)k* GameParameters.sceneCubeSize+GameParameters.sceneCubeBound+GameParameters.sceneCubeEffectiveSize*(float)Math.random();
+   System.out.println("i="+i+"j="+j+"k="+k);
+  System.out.println("x="+this.x+"y="+this.y+"z="+this.z);
  }
 }
 
