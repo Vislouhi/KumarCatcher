@@ -26,7 +26,10 @@ public class SceneQubeData
  
  public SceneQubeData(int i, int j, int k)
  {
-   x= i* GameParameters.sceneCubeSize+
+  
+   this.x= i* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
+  this.y= j* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
+  this.z= k* GameParameters.sceneCubeSize+sceneCubeBound+sceneCubeEffectiveSize*Math.random();
   
  }
 }
@@ -34,5 +37,8 @@ public class SceneQubeData
 public class GameParameters
 {
  static float sceneCubeSize =10f;
+ static float sceneCubeBound =2f;
+ static float sceneCubeEffectiveSize =sceneCubeSize-2*sceneCubeBound;
+ 
  static int numberOfQubes=3;
 }
